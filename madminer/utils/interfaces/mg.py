@@ -422,6 +422,7 @@ def run_mg(
 
     mg_commands = """
         launch {}
+        order={}
         shower={}
         detector=OFF
         analysis=OFF
@@ -429,7 +430,7 @@ def run_mg(
         reweight={}
         done
         """.format(
-        mg_process_directory, shower_option, madspin_option, reweight_option
+        mg_process_directory, order, shower_option, madspin_option, reweight_option
     )
 
     with open(proc_card_filename, "w") as file:
